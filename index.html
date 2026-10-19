@@ -23,6 +23,9 @@
     border:1px solid rgba(255,255,255,.25); border-radius:50%;
     background:rgba(255,255,255,.08); color:#fff; font-size:20px; cursor:pointer;
     backdrop-filter:blur(4px); }
+  #credit { position:fixed; bottom:10px; left:0; right:0; z-index:25; text-align:center;
+    font-size:11px; letter-spacing:1px; color:rgba(255,255,255,.5); pointer-events:none;
+    text-shadow:0 1px 6px rgba(0,0,0,.9); }
   .scene { position:absolute; inset:0; z-index:1; display:flex; flex-direction:column;
     align-items:center; justify-content:flex-end; padding:20px 20px 118px;
     opacity:0; pointer-events:none; transform:scale(.98);
@@ -80,6 +83,7 @@
 <canvas id="fx"></canvas>
 <div id="prog"></div>
 <button id="mute" aria-label="Bật/tắt nhạc">🔇</button>
+<div id="credit">a gift by TranThuong</div>
 <audio id="bgm" loop preload="auto" playsinline src="bgm.mp3"></audio>
 
 <svg width="0" height="0" style="position:absolute">
@@ -512,7 +516,7 @@ function go(i){
 let idx = 0, started = false, autoMode = false, autoTimer = null;
 const bgm = document.getElementById('bgm'), muteBtn = document.getElementById('mute');
 bgm.volume = .55;
-const DUR = [0,5,6,6,5,7,6,9,9,9,9,6,9,6,9,0];
+const DUR = [0,3.5,4.2,4.2,3.5,4.9,4.2,6.3,6.3,6.3,6.3,4.2,6.3,4.2,6.3,0];
 function startAudio(){
   if (started) return;
   started = true; bgm.muted = false;
