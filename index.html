@@ -59,6 +59,8 @@
     filter:drop-shadow(0 0 20px rgba(255,143,171,.35)); }
   .hint { margin-top:26px; font-size:14px; color:#b9b9d6; animation:pulse 1.8s ease-in-out infinite; }
   .hint.pink { color:#ff8fab; }
+  .scene .hint { display:none; }
+  #s0 .hint { display:block; }
   @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
   .snd { margin-top:60px; font-size:13px; color:#8a8aa8; }
   .btn { display:inline-block; margin-top:26px; padding:14px 40px; border:none; border-radius:999px;
@@ -507,23 +509,31 @@ function go(i){
     s.classList.toggle('on', k === i));
   document.getElementById('prog').style.width = ((i + 1) / N * 100) + '%';
 }
-let idx = 0, started = false;
+let idx = 0, started = false, autoMode = false, autoTimer = null;
 const bgm = document.getElementById('bgm'), muteBtn = document.getElementById('mute');
 bgm.volume = .55;
+const DUR = [0,5,6,6,5,7,6,9,9,9,9,6,9,6,9,0];
 function startAudio(){
-  if (started) return; started = true;
-  bgm.play().then(() => muteBtn.textContent = '🔊').catch(() => {});
+  if (started) return;
+  started = true; bgm.muted = false;
+  const p = bgm.play();
+  if (p && p.then) p.then(() => { muteBtn.textContent = '🔊'; }).catch(() => { started = false; });
+}
+function scheduleAuto(){
+  clearTimeout(autoTimer);
+  if (!autoMode || idx >= N - 1 || DUR[idx] <= 0) return;
+  autoTimer = setTimeout(() => { idx++; go(idx); scheduleAuto(); }, DUR[idx] * 1000);
 }
 muteBtn.addEventListener('click', e => {
-  e.stopPropagation(); startAudio();
+  e.stopPropagation();
+  if (!started){ startAudio(); return; }
   bgm.muted = !bgm.muted;
   muteBtn.textContent = bgm.muted ? '🔇' : '🔊';
 });
-document.querySelectorAll('.scene').forEach(s => {
-  s.addEventListener('click', () => {
-    startAudio();
-    if (idx < N - 1){ idx++; go(idx); }
-  });
+document.getElementById('s0').addEventListener('click', () => {
+  startAudio();
+  autoMode = true;
+  idx = 1; go(idx); scheduleAuto();
 });
 document.getElementById('btnReplay').addEventListener('click', e => {
   e.stopPropagation(); idx = 0; go(0);
