@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Lời chúc 20/10 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { height:100%; overflow:hidden; }
+  body {
+    font-family:'Space Mono',monospace; color:#fff;
+    background:radial-gradient(120% 90% at 50% 10%, #141422 0%, #0a0a12 55%, #050508 100%);
+    user-select:none; -webkit-user-select:none; touch-action:manipulation;
+  }
+  #fx { position:fixed; inset:0; z-index:0; pointer-events:none; }
+  #prog { position:fixed; top:0; left:0; height:3px; z-index:30; width:0;
+    background:linear-gradient(90deg,#ff8fab,#ffd43b); transition:width .5s ease;
+    box-shadow:0 0 8px rgba(255,143,171,.8); }
+  #mute { position:fixed; top:14px; right:14px; z-index:30; width:46px; height:46px;
+    border:1px solid rgba(255,255,255,.25); border-radius:50%;
+    background:rgba(255,255,255,.08); color:#fff; font-size:20px; cursor:pointer;
+    backdrop-filter:blur(4px); }
+  .scene { position:absolute; inset:0; z-index:1; display:flex; flex-direction:column;
+    align-items:center; justify-content:flex-end; padding:20px 20px 118px;
+    opacity:0; pointer-events:none; transform:scale(.98);
+    transition:opacity .7s ease, transform .7s ease; }
+  .scene.on { opacity:1; pointer-events:auto; transform:none; }
+  .nu { filter:drop-shadow(0 0 16px rgba(255,143,171,.55)); }
+  .nu.big svg { width:min(50vw,210px); height:auto; animation:hover 3.4s ease-in-out infinite; }
+  .nu.mid svg { width:min(38vw,150px); height:auto; animation:hover 3.4s ease-in-out infinite; }
+  .nu.small { position:absolute; top:56px; left:20px; z-index:2; }
+  .nu.small svg { width:92px; height:auto; animation:hover 3.4s ease-in-out infinite; }
+  @keyframes hover { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .bud { filter:drop-shadow(0 0 22px rgba(255,179,209,.75)); animation:hover 3.4s ease-in-out infinite; }
+  .bud svg { width:min(40vw,150px); height:auto; }
+  .gift-big { font-size:clamp(30px,8.6vw,42px); line-height:1.7; text-align:center;
+    text-shadow:0 2px 16px rgba(0,0,0,.9); margin-top:26px; }
+  .visual { display:flex; align-items:center; justify-content:center; margin:10px 0; position:relative; }
+  .visual svg { overflow:visible; }
+  .heart-big { animation:beat 1.8s ease-in-out infinite; transform-origin:center; }
+  @keyframes beat { 0%,100%{transform:scale(1)} 14%{transform:scale(1.1)} 28%{transform:scale(1)} 42%{transform:scale(1.06)} }
+  .ecg path { fill:none; stroke:#7dffd4; stroke-width:3; stroke-linecap:round;
+    stroke-dasharray:100; stroke-dashoffset:100; animation:ecg 3.2s linear infinite;
+    filter:drop-shadow(0 0 6px rgba(125,255,212,.8)); }
+  @keyframes ecg { to { stroke-dashoffset:-100; } }
+  .bfly { animation:hover 2.8s ease-in-out infinite; }
+  .mini-h { position:absolute; font-size:18px; animation:floatUp 3s ease-in-out infinite; }
+  @keyframes floatUp { 0%,100%{transform:translateY(0) scale(1); opacity:.9} 50%{transform:translateY(-14px) scale(1.15); opacity:.6} }
+  .wtext { padding:0 10px; text-align:center; margin-top:14px;
+    font-size:19px; line-height:2; text-shadow:0 2px 14px rgba(0,0,0,.9); z-index:2; }
+  .wtext em { font-style:normal; color:#ff8fab; font-weight:700; }
+  .wtext .dim { color:#b9b9d6; font-size:14px; letter-spacing:3px; }
+  .grad-text { font-weight:700; font-size:clamp(76px,24vw,116px); line-height:1.1;
+    background:linear-gradient(180deg,#ffe3ef 10%,#ff8fab 55%,#ffd43b 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(0 0 20px rgba(255,143,171,.35)); }
+  .hint { margin-top:26px; font-size:14px; color:#b9b9d6; animation:pulse 1.8s ease-in-out infinite; }
+  .hint.pink { color:#ff8fab; }
+  @keyframes pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+  .snd { margin-top:60px; font-size:13px; color:#8a8aa8; }
+  .btn { display:inline-block; margin-top:26px; padding:14px 40px; border:none; border-radius:999px;
+    font-family:'Space Mono',monospace; font-weight:700; font-size:18px; cursor:pointer;
+    background:linear-gradient(160deg,#ff8fab,#e64980); color:#fff;
+    box-shadow:0 8px 26px rgba(230,73,128,.45); transition:transform .2s; }
+  .btn:active { transform:scale(.94); }
+  .final-card { text-align:center; }
+  .final-card .dim { letter-spacing:4px; font-size:13px; color:#b9b9d6; text-transform:uppercase; }
+  .final-card h1 { font-family:'Dancing Script',cursive; font-size:clamp(40px,11vw,58px);
+    color:#ff8fab; margin:8px 0; text-shadow:0 0 26px rgba(255,143,171,.5); }
+  .big-day { font-family:'Dancing Script',cursive; font-weight:700; color:#ff8fab;
+    font-size:clamp(46px,13vw,64px); text-shadow:0 0 24px rgba(255,143,171,.5); }
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<div id="prog"></div>
+<button id="mute" aria-label="Bật/tắt nhạc">🔇</button>
+<audio id="bgm" loop preload="auto" playsinline src="bgm.mp3"></audio>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <radialGradient id="eyeGrad" cx=".5" cy=".35" r=".8">
+      <stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#ffd6e7"/>
+      <stop offset="1" stop-color="#ff8fab"/>
+    </radialGradient>
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb3d1"/><stop offset="1" stop-color="#e64980"/>
+    </linearGradient>
+    <g id="flw">
+      <g fill="currentColor">
+        <ellipse cx="0" cy="-24" rx="10" ry="24"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(45)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(90)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(135)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(180)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(225)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(270)"/>
+        <ellipse cx="0" cy="-24" rx="10" ry="24" transform="rotate(315)"/>
+      </g>
+      <circle r="8.5" fill="#ffd43b"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- s0: gift intro -->
+<section class="scene on" id="s0">
+  <div class="bud">
+    <svg viewBox="0 0 100 140">
+      <line x1="50" y1="92" x2="50" y2="134" stroke="#5fbf77" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="36" cy="112" rx="6" ry="13" fill="#5fbf77" transform="rotate(-32 36 112)"/>
+      <path d="M50 6 C50 6 28 32 28 60 C28 80 38 92 50 92 C62 92 72 80 72 60 C72 32 50 6 50 6 Z"
+        fill="#ffb3d1" opacity=".95"/>
+      <path d="M50 22 C50 22 38 40 38 60 C38 72 44 80 50 80 C56 80 62 72 62 60 C62 40 50 22 50 22 Z"
+        fill="#ffd6e7" opacity=".9"/>
+    </svg>
+  </div>
+  <div class="gift-big">Có một món quà nhỏ<br>cho ngày 20/10</div>
+  <div class="hint pink">chạm để mở quà</div>
+  <div class="snd">bật âm thanh để nghe trọn vẹn nhé</div>
+</section>
+
+<!-- s1: greeting -->
+<section class="scene" id="s1">
+  <div class="nu big" data-expr="open"></div>
+  <div class="wtext">
+    <div>này cậu ơi!</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s2: Nụ intro -->
+<section class="scene" id="s2">
+  <div class="nu big" data-expr="open"></div>
+  <div class="wtext">
+    <div>tớ là <em>Nụ</em> — nàng tiên nhỏ<br>của vườn hoa</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s3: mission -->
+<section class="scene" id="s3">
+  <div class="nu big" data-expr="open"></div>
+  <div class="wtext">
+    <div>hôm nay tớ được giao một<br>nhiệm vụ đặc biệt lắm đó...</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s4: vi hom nay -->
+<section class="scene" id="s4">
+  <div class="nu big" data-expr="open"></div>
+  <div class="wtext">
+    <div>Vì hôm nay là ngày ...</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s5: 20/10 reveal -->
+<section class="scene" id="s5">
+  <div class="nu small" data-expr="happy"></div>
+  <div class="grad-text">20/10</div>
+  <div class="wtext">
+    <div class="dim">NGÀY PHỤ NỮ VIỆT NAM</div>
+    <div style="margin-top:14px"><em>20/10</em> nèeee</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s6: bon loi chuc -->
+<section class="scene" id="s6">
+  <div class="nu big" data-expr="open"></div>
+  <div class="wtext">
+    <div>tớ xin gửi cậu <em>bốn lời chúc</em> nhé</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s7: suc khoe -->
+<section class="scene" id="s7">
+  <div class="nu small" data-expr="open"></div>
+  <div class="visual">
+    <svg width="220" height="200" viewBox="0 0 100 92">
+      <g class="heart-big">
+        <path d="M50 88C36 76 4 56 4 30 4 10 28 2 40 14c5 5 8 9 10 14 2-5 5-9 10-14C72 2 96 10 96 30c0 26-32 46-46 58z"
+          fill="url(#heartGrad)" stroke="#fff" stroke-width="2"/>
+      </g>
+    </svg>
+  </div>
+  <svg class="ecg" width="300" height="44" viewBox="0 0 420 60" preserveAspectRatio="none">
+    <path pathLength="100" d="M0 30 H150 L165 22 180 30 H210 L225 8 240 52 255 10 270 30 H300 L315 26 330 30 H420"/>
+  </svg>
+  <div class="wtext">
+    <div>chúc cậu thật nhiều <em>sức khỏe</em><br>để còn đi hết những nơi cậu muốn đến</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s8: binh yen -->
+<section class="scene" id="s8">
+  <div class="nu small" data-expr="open"></div>
+  <div class="visual">
+    <svg width="300" height="190" viewBox="0 0 200 130">
+      <ellipse cx="100" cy="102" rx="92" ry="22" fill="none" stroke="#ffffff" stroke-opacity=".18"/>
+      <ellipse cx="100" cy="102" rx="62" ry="14" fill="none" stroke="#ffffff" stroke-opacity=".14"/>
+      <ellipse cx="100" cy="102" rx="34" ry="8" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
+      <ellipse cx="48" cy="100" rx="20" ry="7" fill="#4caf7d" opacity=".8"/>
+      <ellipse cx="152" cy="104" rx="16" ry="6" fill="#4caf7d" opacity=".7"/>
+      <g>
+        <g fill="#f3b8d4" opacity=".85">
+          <ellipse cx="100" cy="66" rx="13" ry="30"/>
+          <ellipse cx="100" cy="66" rx="13" ry="30" transform="rotate(36 100 96)"/>
+          <ellipse cx="100" cy="66" rx="13" ry="30" transform="rotate(-36 100 96)"/>
+          <ellipse cx="100" cy="66" rx="13" ry="30" transform="rotate(72 100 96)"/>
+          <ellipse cx="100" cy="66" rx="13" ry="30" transform="rotate(-72 100 96)"/>
+        </g>
+        <g fill="#ff9ebb">
+          <ellipse cx="100" cy="72" rx="11" ry="24"/>
+          <ellipse cx="100" cy="72" rx="11" ry="24" transform="rotate(45 100 96)"/>
+          <ellipse cx="100" cy="72" rx="11" ry="24" transform="rotate(-45 100 96)"/>
+        </g>
+        <g fill="#ffd6e7">
+          <ellipse cx="100" cy="78" rx="9" ry="19"/>
+          <ellipse cx="100" cy="78" rx="9" ry="19" transform="rotate(30 100 97)"/>
+          <ellipse cx="100" cy="78" rx="9" ry="19" transform="rotate(-30 100 97)"/>
+        </g>
+        <circle cx="100" cy="92" r="5" fill="#ffd43b"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>chúc cậu <em>bình yên</em><br>dù ngoài kia có ồn ào thế nào</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s9: tu do -->
+<section class="scene" id="s9">
+  <div class="nu small" data-expr="open"></div>
+  <div class="visual">
+    <svg width="280" height="190" viewBox="0 0 280 190">
+      <g class="bfly" style="animation-delay:0s">
+        <g transform="translate(70,60)">
+          <ellipse cx="-14" cy="-8" rx="16" ry="12" fill="#c39bff" opacity=".9"/>
+          <ellipse cx="-12" cy="10" rx="12" ry="9" fill="#c39bff" opacity=".75"/>
+          <ellipse cx="14" cy="-8" rx="16" ry="12" fill="#7bc8ff" opacity=".9"/>
+          <ellipse cx="12" cy="10" rx="12" ry="9" fill="#7bc8ff" opacity=".75"/>
+          <rect x="-2" y="-14" width="4" height="28" rx="2" fill="#fff" opacity=".9"/>
+        </g>
+      </g>
+      <g class="bfly" style="animation-delay:-.9s">
+        <g transform="translate(150,110) scale(1.25)">
+          <ellipse cx="-14" cy="-8" rx="16" ry="12" fill="#ff9ebb" opacity=".9"/>
+          <ellipse cx="-12" cy="10" rx="12" ry="9" fill="#ff9ebb" opacity=".75"/>
+          <ellipse cx="14" cy="-8" rx="16" ry="12" fill="#c39bff" opacity=".9"/>
+          <ellipse cx="12" cy="10" rx="12" ry="9" fill="#c39bff" opacity=".75"/>
+          <rect x="-2" y="-14" width="4" height="28" rx="2" fill="#fff" opacity=".9"/>
+        </g>
+      </g>
+      <g class="bfly" style="animation-delay:-1.7s">
+        <g transform="translate(215,55) scale(.9)">
+          <ellipse cx="-14" cy="-8" rx="16" ry="12" fill="#ffb3d1" opacity=".9"/>
+          <ellipse cx="-12" cy="10" rx="12" ry="9" fill="#ffb3d1" opacity=".75"/>
+          <ellipse cx="14" cy="-8" rx="16" ry="12" fill="#ffd98a" opacity=".9"/>
+          <ellipse cx="12" cy="10" rx="12" ry="9" fill="#ffd98a" opacity=".75"/>
+          <rect x="-2" y="-14" width="4" height="28" rx="2" fill="#fff" opacity=".9"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>chúc cậu đủ <em>tự do</em> để làm<br>điều mình thích, và đủ dũng cảm<br>để theo đuổi nó</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s10: yeu thuong -->
+<section class="scene" id="s10">
+  <div class="nu mid" data-expr="happy"></div>
+  <div class="visual">
+    <span class="mini-h" style="left:12%;top:6%">💗</span>
+    <span class="mini-h" style="right:14%;top:12%;animation-delay:-1s">💕</span>
+    <span class="mini-h" style="left:20%;bottom:8%;animation-delay:-2s">💖</span>
+    <span class="mini-h" style="right:20%;bottom:4%;animation-delay:-.5s">💗</span>
+    <svg width="190" height="175" viewBox="0 0 100 92">
+      <g class="heart-big">
+        <path d="M50 88C36 76 4 56 4 30 4 10 28 2 40 14c5 5 8 9 10 14 2-5 5-9 10-14C72 2 96 10 96 30c0 26-32 46-46 58z"
+          fill="url(#heartGrad)" stroke="#fff" stroke-width="2"/>
+        <path d="M20 24c3-8 12-11 18-7" fill="none" stroke="#fff" stroke-opacity=".7"
+          stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>chúc cậu luôn được <em>yêu thương</em><br>đúng cách, đúng người,<br>và cả bởi chính cậu</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s11: hoan hao -->
+<section class="scene" id="s11">
+  <div class="nu big" data-expr="happy"></div>
+  <div class="wtext">
+    <div>cậu không cần phải <em>hoàn hảo</em> đâu</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s12: dep o cach -->
+<section class="scene" id="s12">
+  <div class="nu mid" data-expr="open"></div>
+  <div class="visual">
+    <svg width="230" height="270" viewBox="0 0 200 280">
+      <g stroke="#5fbf77" stroke-width="4" stroke-linecap="round">
+        <line x1="100" y1="195" x2="62" y2="95"/><line x1="100" y1="195" x2="100" y2="70"/>
+        <line x1="100" y1="195" x2="138" y2="95"/><line x1="100" y1="195" x2="45" y2="130"/>
+        <line x1="100" y1="195" x2="155" y2="130"/>
+      </g>
+      <ellipse cx="78" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(-30 78 150)"/>
+      <ellipse cx="122" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(30 122 150)"/>
+      <use href="#flw" color="#ffb3d1" transform="translate(62,72)"/>
+      <use href="#flw" color="#ffd6e7" transform="translate(100,48) scale(1.15)"/>
+      <use href="#flw" color="#ff9ebb" transform="translate(138,72)"/>
+      <use href="#flw" color="#c3b8ff" transform="translate(45,108) scale(.85)"/>
+      <use href="#flw" color="#ffe9a8" transform="translate(155,108) scale(.85)"/>
+      <path d="M42 192 L158 192 L122 278 L78 278 Z" fill="#ff9ebb" opacity=".92"/>
+      <path d="M42 192 L158 192 L152 210 L48 210 Z" fill="#ffffff" opacity=".25"/>
+      <ellipse cx="88" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(-24 88 212)"/>
+      <ellipse cx="112" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(24 112 212)"/>
+      <circle cx="100" cy="212" r="7" fill="#fff"/>
+      <path d="M100 219 L86 248 M100 219 L114 248" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>cậu đẹp ở cách cậu <em>cố gắng</em>,<br>cách cậu cười, và cách cậu<br>thương người khác</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s13: tang bo hoa -->
+<section class="scene" id="s13">
+  <div class="nu mid" data-expr="open"></div>
+  <div class="visual">
+    <svg width="230" height="270" viewBox="0 0 200 280">
+      <g stroke="#5fbf77" stroke-width="4" stroke-linecap="round">
+        <line x1="100" y1="195" x2="62" y2="95"/><line x1="100" y1="195" x2="100" y2="70"/>
+        <line x1="100" y1="195" x2="138" y2="95"/><line x1="100" y1="195" x2="45" y2="130"/>
+        <line x1="100" y1="195" x2="155" y2="130"/>
+      </g>
+      <ellipse cx="78" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(-30 78 150)"/>
+      <ellipse cx="122" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(30 122 150)"/>
+      <use href="#flw" color="#ffb3d1" transform="translate(62,72)"/>
+      <use href="#flw" color="#ffd6e7" transform="translate(100,48) scale(1.15)"/>
+      <use href="#flw" color="#ff9ebb" transform="translate(138,72)"/>
+      <use href="#flw" color="#c3b8ff" transform="translate(45,108) scale(.85)"/>
+      <use href="#flw" color="#ffe9a8" transform="translate(155,108) scale(.85)"/>
+      <path d="M42 192 L158 192 L122 278 L78 278 Z" fill="#ff9ebb" opacity=".92"/>
+      <path d="M42 192 L158 192 L152 210 L48 210 Z" fill="#ffffff" opacity=".25"/>
+      <ellipse cx="88" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(-24 88 212)"/>
+      <ellipse cx="112" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(24 112 212)"/>
+      <circle cx="100" cy="212" r="7" fill="#fff"/>
+      <path d="M100 219 L86 248 M100 219 L114 248" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>tớ tặng cậu bó hoa này nè 💐</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s14: hoa khong heo -->
+<section class="scene" id="s14">
+  <div class="nu mid" data-expr="sleepy"></div>
+  <div class="visual">
+    <svg width="230" height="270" viewBox="0 0 200 280">
+      <g stroke="#5fbf77" stroke-width="4" stroke-linecap="round">
+        <line x1="100" y1="195" x2="62" y2="95"/><line x1="100" y1="195" x2="100" y2="70"/>
+        <line x1="100" y1="195" x2="138" y2="95"/><line x1="100" y1="195" x2="45" y2="130"/>
+        <line x1="100" y1="195" x2="155" y2="130"/>
+      </g>
+      <ellipse cx="78" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(-30 78 150)"/>
+      <ellipse cx="122" cy="150" rx="7" ry="16" fill="#5fbf77" transform="rotate(30 122 150)"/>
+      <use href="#flw" color="#ffb3d1" transform="translate(62,72)"/>
+      <use href="#flw" color="#ffd6e7" transform="translate(100,48) scale(1.15)"/>
+      <use href="#flw" color="#ff9ebb" transform="translate(138,72)"/>
+      <use href="#flw" color="#c3b8ff" transform="translate(45,108) scale(.85)"/>
+      <use href="#flw" color="#ffe9a8" transform="translate(155,108) scale(.85)"/>
+      <path d="M42 192 L158 192 L122 278 L78 278 Z" fill="#ff9ebb" opacity=".92"/>
+      <path d="M42 192 L158 192 L152 210 L48 210 Z" fill="#ffffff" opacity=".25"/>
+      <ellipse cx="88" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(-24 88 212)"/>
+      <ellipse cx="112" cy="212" rx="16" ry="10" fill="#fff" opacity=".95" transform="rotate(24 112 212)"/>
+      <circle cx="100" cy="212" r="7" fill="#fff"/>
+      <path d="M100 219 L86 248 M100 219 L114 248" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="wtext">
+    <div>một loài hoa <em>không bao giờ héo</em><br>vì mỗi cánh là một lời yêu thương</div>
+    <div class="hint">chạm để qua</div>
+  </div>
+</section>
+
+<!-- s15: final -->
+<section class="scene" id="s15">
+  <div class="nu mid" data-expr="happy"></div>
+  <div class="final-card">
+    <div class="dim">chúc mừng ngày</div>
+    <h1>Phụ nữ Việt Nam</h1>
+    <div class="big-day">20 · 10</div>
+    <div class="dim" style="margin:10px 0">gửi người phụ nữ tuyệt vời</div>
+    <div style="max-width:330px;font-size:15px;line-height:1.9;color:#d8d8ea">
+      mong mỗi ngày của cậu đều có hoa, có nắng, có tiếng cười — và có người nhớ đến cậu thật nhiều.
+    </div>
+    <button class="btn" id="btnReplay">↻ xem lại</button>
+  </div>
+</section>
+
+<script>
+/* ---------- Nụ character ---------- */
+function nuSVG(expr){
+  let eyes, mouth;
+  if (expr === 'happy'){
+    eyes = '<path d="M31 86 Q41 73 51 86" fill="none" stroke="#ffe3ef" stroke-width="5.5" stroke-linecap="round"/>'
+         + '<path d="M69 86 Q79 73 89 86" fill="none" stroke="#ffe3ef" stroke-width="5.5" stroke-linecap="round"/>';
+    mouth = '<path d="M46 108 Q60 124 74 108" fill="none" stroke="#ffe3ef" stroke-width="4.5" stroke-linecap="round"/>';
+  } else if (expr === 'sleepy'){
+    eyes = '<line x1="33" y1="84" x2="51" y2="84" stroke="#ffe3ef" stroke-width="5" stroke-linecap="round"/>'
+         + '<line x1="69" y1="84" x2="87" y2="84" stroke="#ffe3ef" stroke-width="5" stroke-linecap="round"/>';
+    mouth = '<path d="M54 112 Q60 117 66 112" fill="none" stroke="#ffe3ef" stroke-width="4" stroke-linecap="round"/>';
+  } else {
+    eyes = '<ellipse cx="42" cy="84" rx="9.5" ry="15" fill="url(#eyeGrad)"/>'
+         + '<ellipse cx="78" cy="84" rx="9.5" ry="15" fill="url(#eyeGrad)"/>';
+    mouth = '<path d="M52 111 Q60 118 68 111" fill="none" stroke="#ffe3ef" stroke-width="4" stroke-linecap="round"/>';
+  }
+  return '<svg viewBox="0 0 120 160">'
+    + '<path d="M60 16 Q58 6 48 3 M60 16 Q62 6 72 3" fill="none" stroke="#7bd88f" stroke-width="3.5" stroke-linecap="round"/>'
+    + '<path d="M60 16 C60 16 22 58 22 96 C22 126 38 144 60 144 C82 144 98 126 98 96 C98 58 60 16 60 16 Z"'
+    + ' fill="rgba(255,143,171,.10)" stroke="#ff8fab" stroke-width="3.5"/>'
+    + '<path d="M25 106 Q9 102 5 86 Q21 88 25 106 Z" fill="rgba(123,216,143,.25)" stroke="#7bd88f" stroke-width="2.5"/>'
+    + '<path d="M95 106 Q111 102 115 86 Q99 88 95 106 Z" fill="rgba(123,216,143,.25)" stroke="#7bd88f" stroke-width="2.5"/>'
+    + eyes
+    + '<ellipse cx="31" cy="100" rx="7" ry="4.5" fill="#ff8fab" opacity=".55"/>'
+    + '<ellipse cx="89" cy="100" rx="7" ry="4.5" fill="#ff8fab" opacity=".55"/>'
+    + mouth + '</svg>';
+}
+document.querySelectorAll('.nu').forEach(el => { el.innerHTML = nuSVG(el.dataset.expr || 'open'); });
+
+/* ---------- petals + grass canvas ---------- */
+const cv = document.getElementById('fx'), ctx = cv.getContext('2d');
+let W, H, grassCv = null;
+function resize(){
+  W = cv.width = innerWidth; H = cv.height = innerHeight;
+  grassCv = document.createElement('canvas');
+  grassCv.width = W; grassCv.height = H;
+  const g = grassCv.getContext('2d');
+  const cols = ['#7bd88f','#ffd43b','#ff8fab','#7bc8ff','#c39bff','#ff9e7d'];
+  for (let i = 0; i < 110; i++){
+    const x = Math.random()*W, h = 40 + Math.random()*80, bend = (Math.random()-.5)*50;
+    g.strokeStyle = cols[i % cols.length]; g.globalAlpha = .5 + Math.random()*.4;
+    g.lineWidth = 2 + Math.random()*2.5; g.beginPath();
+    g.moveTo(x, H); g.quadraticCurveTo(x + bend*.4, H - h*.6, x + bend, H - h);
+    g.stroke();
+  }
+  g.globalAlpha = 1;
+}
+addEventListener('resize', resize); resize();
+const PCOL = ['#ffb3d1','#c39bff','#ffd98a','#ff9ebb'];
+const P = [];
+for (let i = 0; i < 34; i++) P.push(newPetal(true));
+const ST = [];
+for (let i = 0; i < 26; i++) ST.push({ x: Math.random()*W, y: Math.random()*H,
+  r: .8 + Math.random()*1.6, ph: Math.random()*6.28 });
+function newPetal(init){
+  return { x: Math.random()*W, y: init ? Math.random()*H : -24,
+    s: 8 + Math.random()*14, v: .7 + Math.random()*1.8,
+    ph: Math.random()*6.28, sw: .6 + Math.random()*1.4,
+    r: Math.random()*6.28, vr: (Math.random()-.5)*.04,
+    c: PCOL[Math.random()*PCOL.length|0], a: .5 + Math.random()*.45 };
+}
+(function loop(){
+  ctx.clearRect(0,0,W,H);
+  ctx.drawImage(grassCv, 0, 0);
+  for (const s of ST){
+    s.ph += .05;
+    ctx.globalAlpha = .25 + Math.abs(Math.sin(s.ph))*.55;
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, 6.29); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  for (const p of P){
+    p.y += p.v; p.ph += .014; p.r += p.vr;
+    ctx.save();
+    ctx.translate(p.x + Math.sin(p.ph)*36*p.sw, p.y);
+    ctx.rotate(p.r); ctx.globalAlpha = p.a; ctx.fillStyle = p.c;
+    ctx.beginPath(); ctx.ellipse(0, 0, p.s*.55, p.s, 0, 0, 6.29); ctx.fill();
+    ctx.restore();
+    if (p.y > H + 30) Object.assign(p, newPetal(false));
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* ---------- scenes ---------- */
+const N = 16;
+function go(i){
+  document.querySelectorAll('.scene').forEach((s, k) =>
+    s.classList.toggle('on', k === i));
+  document.getElementById('prog').style.width = ((i + 1) / N * 100) + '%';
+}
+let idx = 0, started = false;
+const bgm = document.getElementById('bgm'), muteBtn = document.getElementById('mute');
+bgm.volume = .55;
+function startAudio(){
+  if (started) return; started = true;
+  bgm.play().then(() => muteBtn.textContent = '🔊').catch(() => {});
+}
+muteBtn.addEventListener('click', e => {
+  e.stopPropagation(); startAudio();
+  bgm.muted = !bgm.muted;
+  muteBtn.textContent = bgm.muted ? '🔇' : '🔊';
+});
+document.querySelectorAll('.scene').forEach(s => {
+  s.addEventListener('click', () => {
+    startAudio();
+    if (idx < N - 1){ idx++; go(idx); }
+  });
+});
+document.getElementById('btnReplay').addEventListener('click', e => {
+  e.stopPropagation(); idx = 0; go(0);
+});
+go(0);
+</script>
+</body>
+</html>
